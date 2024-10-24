@@ -30,6 +30,9 @@ const config = {
                 config: './config/webpack.dev.config.js',
             },
         },
+        react: {
+            version: 'detect', // Автоматично виявляє версію React
+        },
     },
     plugins: ['simple-import-sort', 'react'],
     ignorePatterns: ['node_modules'],

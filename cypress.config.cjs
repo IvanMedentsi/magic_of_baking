@@ -2,7 +2,7 @@ const { defineConfig } = require('cypress');
 const webpackConfig = require('./config/webpack.cypress.config');
 
 module.exports = defineConfig({
-  projectId: 'i4tufs',
+    projectId: 'i4tufs',
     component: {
         devServer: {
             framework: 'react',
