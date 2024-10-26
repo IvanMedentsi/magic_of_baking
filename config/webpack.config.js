@@ -39,7 +39,7 @@ const basicConfig = {
         },
     },
     devServer: {
-        port: 9001,
+        port: 9000,
     },
 };
 
