@@ -21,14 +21,14 @@ const basicConfig = {
             {
                 test: /\.(js|jsx)$/i,
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: ['@babel/preset-env', '@babel/preset-react'],
-                        },
-                    },
-                ],
+                use: 'babel-loader',
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext]',
+                },
             },
         ],
     },

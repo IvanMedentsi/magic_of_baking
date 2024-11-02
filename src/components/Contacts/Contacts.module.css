@@ -1,0 +1,47 @@
+/* Contacts.module.css */
+
+.contactsContainer {
+    padding: 140px;
+    background-color: #EAE2CF;
+    color: #5F5743;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+    
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto; /* Центрує колонки на сторінці */
+    gap: 150px; /* Відстань між стовпцями */
+}
+
+.column {
+    width: 45%;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #7a6c37; /* Колір посилань */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #939090; /* Зміна кольору при наведенні */
+}

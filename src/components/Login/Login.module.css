@@ -1,0 +1,59 @@
+.loginContainer {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+ 
+    justify-content: center; /* Центруємо по горизонталі */
+    align-items: center;
+       
+    flex-direction: column;
+    background-color: #EAE2CF;
+    padding: 200px;
+}
+
+.pageTitle {
+    font-size: 32px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.authContainer {
+    width: 400px; /* Зменшуємо ширину контейнера */
+    padding: 70px; /* Збільшуємо внутрішні відступи для більшої висоти */
+    background-color: #d3c9b5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputField {
+    width: 96%; /* Залишаємо ширину на 100% для полів вводу */
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 1px solid #ccc; /* Колір і товщина межі */
+    border-radius: 8px;
+}
+
+.rememberMe {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #5F5743;
+    margin: 10px 20px; /* Відступи зліва та справа по 20px для контейнера */
+}
+
+.submitButton {
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #333;
+    background-color: #C2BFA7;
+    border: 1.2px solid #333;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.8s;
+}
+
+.submitButton:hover {
+    background-color: #ddd;
+}
