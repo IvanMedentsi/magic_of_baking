@@ -24,7 +24,7 @@
     justify-content: center;
 }
 .paymentImage {
-    margin-top: -150px; /* Використовуйте від'ємне значення, щоб підняти зображення */
+    margin-top: -150px; 
 }
 .image {
     max-width: 100%;

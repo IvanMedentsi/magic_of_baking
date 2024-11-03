@@ -20,7 +20,7 @@
 }
 
 .authContainer {
-    width: 400px; /* Зменшуємо ширину контейнера */
+    width: 400px; 
     padding: 70px;
     
     background-color: #d3c9b5;
@@ -29,11 +29,11 @@
   
 }
 .inputField {
-    width: 96%; /* Або будь-яка інша ширина */
-    padding: 10px; /* Відступи всередині поля */
-    margin-bottom: 15px; /* Відступ між полями */
-    border: 1px solid #ccc; /* Колір і товщина межі */
-    border-radius: 8px; /* Закруглення країв */
+    width: 96%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
 }
 
 

@@ -3,7 +3,7 @@
     font-family: Arial, sans-serif;
     background-color: #EAE2CF;
     
-        padding-top: 150px; /* Відступ для вмісту під фіксованим хедером */
+        padding-top: 150px; 
     
 }
 
@@ -26,30 +26,29 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 90px; /* Зменшуємо відступ між тортами */
+    gap: 90px; 
     padding-top: 20px;
 }
 
 .cakeItem {
-    position: relative; /* Додаємо для позиціонування кнопки */
+    position: relative; 
     text-align: center;
 }
 
 .cakeImage {
     width: 300px;
     height: 300px;
-    object-fit: cover; /* Щоб зображення краще вписувалось у контейнер */
-    border: 5px solid #c5b499; /* Обводка */
-    border-radius: 10px; /* Заокруглення країв (необов'язково) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь */
-    transition: transform 0.3s ease; /* Анімація при наведені */
+    object-fit: cover; 
+    border: 5px solid #c5b499; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
 
 }
 
-/* Стиль для кнопки під центральним тортом */
 .centeredItem .viewButton {
     position: absolute;
-    bottom: -60px; /* Встановлюємо нижче під зображенням */
+    bottom: -60px; 
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -58,9 +57,9 @@ h2 {
     color: white;
     font-size: 16px;
     cursor: pointer;
-    border: 3px solid #c5b499; /* Обводка */
-    border-radius: 2px; /* Заокруглення країв (необов'язково) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь */
+    border: 3px solid #c5b499; 
+    border-radius: 2px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s ease;
 
 }
@@ -69,17 +68,15 @@ h2 {
     transition: 1s;
 }
 
-/* Стиль для секції "Про нас" */
 .about {
     display: flex;
-    flex-direction: column; /* Змінюємо напрямок на колонку */
-    align-items: center; /* Центруємо по горизонталі */
+    flex-direction: column; 
+    align-items: center; 
     padding: 100px 20px;
     color: #4a3c32;
     line-height: 1.6;
 }
 
-/* Стиль для секції "Чому Нас обирають" */
 .advantages {
     padding: 0px 20px;
     text-align: center;
@@ -89,20 +86,20 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px; /* Відступ між елементами */
+    gap: 100px;
     padding-top: 20px;
 }
 .advantageText {
-    margin-top: 10px; /* Відступ між заголовком і текстом */
-    font-size: 14px; /* Розмір шрифту */
-    color: #4a3c32; /* Колір тексту, відповідний дизайну */
-    text-align: center; /* Центруємо текст */
+    margin-top: 10px; 
+    font-size: 14px; 
+    color: #4a3c32; 
+    text-align: center; 
 }
 
 .chooseWe {
     width: 180px;
     height: 180px;
-    margin: 0 auto 10px; /* Зменшуємо нижній відступ */
+    margin: 0 auto 10px; 
     display: block;
 }
 
