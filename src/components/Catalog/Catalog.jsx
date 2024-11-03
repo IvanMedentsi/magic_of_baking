@@ -52,7 +52,7 @@ const Catalog = () => {
 
     const handleAddToCart = (product) => {
         addToCart(product);
-        alert(`${product.name} додано до кошика!`); // Можна додати сповіщення
+        
     };
 
     const handlePageChange = (page) => {
@@ -69,7 +69,7 @@ const Catalog = () => {
                     <div key={index} className={styles.productItem}>
                         <img src={product.image} alt={product.name} className={styles.productImage} />
                         <h3 className={styles.productName}>{product.name}</h3>
-                        <p className={styles.productPrice}>{product.price}</p>
+                        <p className={styles.productPrice}>{product.price} грн</p>
                         <p className={styles.productWeight}>Вага: {product.weight}</p>
                         <button onClick={() => handleAddToCart(product)} className={styles.cartButton}>
                             Додати до кошика

@@ -1,11 +1,12 @@
 
-.registerContainer {
-    
+.loginContainer {
     max-width: 100%;
     margin: 0 auto;
     display: flex;
+ 
     justify-content: center; 
     align-items: center;
+       
     flex-direction: column;
     background-color: #EAE2CF;
     padding: 200px;
@@ -16,35 +17,30 @@
     text-align: center;
     color: #333;
     margin-bottom: 30px;
-
 }
 
 .authContainer {
-    width: 400px; 
-    padding: 70px;
-    
+    width: 400px;
+    padding: 70px; 
     background-color: #d3c9b5;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  
 }
+
 .inputField {
     width: 96%; 
     padding: 10px; 
-    margin-bottom: 15px; 
+    margin: 10px 0; 
     border: 1px solid #ccc; 
-    border-radius: 8px; 
+    border-radius: 8px;
 }
 
-
-
-
-.privacyPolicy {
+.rememberMe {
     display: flex;
     align-items: center;
     font-size: 14px;
     color: #5F5743;
-    margin-bottom: 10px;
+    margin: 10px 20px; 
 }
 
 .submitButton {
@@ -60,7 +56,5 @@
 }
 
 .submitButton:hover {
-    background-color: #b8a588;
+    background-color: #ddd;
 }
-
-

@@ -7,8 +7,8 @@ const useRegister = () => {
 
     const register = async (credentials) => {
         setLoading(true);
-        setError(undefined); // Скидаємо попередню помилку
-        setSuccess(undefined); // Скидаємо попередній успіх
+        setError(undefined); 
+        setSuccess(undefined); 
         try {
             const response = await fetch('/api/register', {
                 method: 'POST',
@@ -23,7 +23,7 @@ const useRegister = () => {
             }
 
             const result = await response.json();
-            setSuccess(result.message); // Можливо, вам потрібно буде адаптувати
+            setSuccess(result.message); 
         } catch (error_) {
             setError(error_.message);
         } finally {

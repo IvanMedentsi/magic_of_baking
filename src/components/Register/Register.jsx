@@ -1,54 +1,74 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-import useRegister from '../../hooks/useRegister'; // Імпорт вашого хуку
+import { auth } from "../../firebase";
 import styles from './Register.module.css';
 
 const Register = () => {
-    const { register, loading, error, success } = useRegister(); // Використовуємо хук
-    const [credentials, setCredentials] = useState({
-        firstName: '',
-        lastName: '',
-        phone: '',
-        email: '',
-        password: ''
-    });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [copyPassword, setCopyPassword] = useState("");
+  const [error, setError] = useState("");
 
-    const handleChange = (event) => {
-        setCredentials({ ...credentials, [event.target.placeholder]: event.target.value });
-    };
+  function register(event) {
+    event.preventDefault();
+    if (copyPassword !== password) {
+      setError("Passwords didn't match");
+      return;
+    }
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((user) => {
+        console.log(user);
+        setError("");
+        setEmail("");
+        setCopyPassword("");
+        setPassword("");
+      })
+      .catch((error) => {
+        console.log(error);
+        setError("Помилка при створенні облікового запису");
+      });
+  }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        register(credentials); // Викликаємо функцію реєстрації
-    };
-
-    return (
-        <div className={styles.registerContainer}>
-            <h2 className={styles.pageTitle}>Реєстрація</h2>
-            <div className={styles.authContainer}>
-                <form onSubmit={handleSubmit}>
-                    <input type="text" className={styles.inputField} placeholder="Ім'я" onChange={handleChange} />
-                    <input type="text" className={styles.inputField} placeholder="Прізвище" onChange={handleChange} />
-                    <input type="tel" className={styles.inputField} placeholder="Телефон" onChange={handleChange} />
-                    <input type="email" className={styles.inputField} placeholder="Email" onChange={handleChange} />
-                    <input type="password" className={styles.inputField} placeholder="Пароль" onChange={handleChange} />
-                    <div className={styles.privacyPolicy}>
-                        <input type="checkbox" id="privacyPolicy" className={styles.checkbox} />
-                        <label htmlFor="privacyPolicy">Я приймаю політику конфіденційності</label>
-                    </div>
-                    <button type="submit" className={styles.submitButton} disabled={loading}>
-                        {loading ? 'Завантаження...' : 'Зареєструватися'}
-                    </button>
-                    {error && <p className={styles.error}>{error}</p>}
-                    {success && <p className={styles.success}>{success}</p>} {/* Відображення успіху */}
-                </form>
-                <p>
-                    Вже маєте обліковий запис? <Link to="/login">Увійти</Link>
-                </p>
-            </div>
-        </div>
-    );
+  return (
+    <div className={styles.loginContainer}>
+      <div className={styles.authContainer}>
+        <h2 className={styles.pageTitle}>Реєстрація</h2>
+        <form onSubmit={register}>
+          <input
+            className={styles.inputField}
+            placeholder="Please enter your email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            type="email"
+          />
+          <input
+            className={styles.inputField}
+            placeholder="Please enter your password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            type="password"
+          />
+          <input
+            className={styles.inputField}
+            placeholder="Please enter your password again"
+            value={copyPassword}
+            onChange={(event) => setCopyPassword(event.target.value)}
+            type="password"
+          />
+          <button type="submit" className={styles.submitButton}>
+            Створити
+          </button>
+          {error && <p style={{ color: "red" }}>{error}</p>}
+        </form>
+        <p>
+        Вже маєте обліковий запис?  <Link to="/login">Увійти</Link>
+        
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default Register;

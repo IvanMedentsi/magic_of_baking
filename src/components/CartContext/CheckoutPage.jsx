@@ -16,7 +16,6 @@ const CheckoutPage = () => {
         delivery: ''
     });
 
-    // Підрахунок загальної суми
     const total = cartItems.reduce((totalPrice, item) => totalPrice + item.price * item.quantity, 0);
 
     const handleChange = (event) => {
