@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { CartProvider } from './components/CartContext/CartContext'; 
+import CheckoutPage from './components/CartContext/CheckoutPage';
 import Catalog from './components/Catalog/Catalog';    
 import Contacts from './components/Contacts/Contacts';
 import Footer from './components/Footer/Footer';
@@ -25,6 +25,7 @@ const App = () => {
                         <Route path="/login" element={<Login />} /> 
                         <Route path="/contacts" element={<Contacts />} /> 
                         <Route path="/catalog" element={<Catalog />} /> 
+                        <Route path="/checkout" element={<CheckoutPage />} />
                     </Routes>
                 </div>
                 <Footer />

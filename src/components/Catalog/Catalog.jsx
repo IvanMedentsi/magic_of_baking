@@ -23,27 +23,27 @@ import { useCart } from '../CartContext/CartContext'; // Імпортуйте us
 import styles from './Catalog.module.css';
 
 const productsPage1 = [
-    { name: 'Торт "Чізкейк "', price: '770 грн', weight: '900 г', image: Tort1 },
-    { name: 'Торт "Естерхазі"', price: '850 грн', weight: '1 кг', image: Tort2 },
-    { name: 'Торт "Київський дарунок "', price: '770 грн', weight: '850 г', image: Tort3 },
-    { name: 'Торт "Мокко"', price: '770 грн', weight: '900 г', image: Tort4 },
-    { name: 'Торт "Снікерс"', price: '900 грн', weight: '1 кг', image: Tort5 },
-    { name: 'Торт "Мигдалевий"', price: '500 грн', weight: '700 г', image: Tort6 },
-    { name: 'Торт "Акація"', price: '650 грн', weight: '850 г', image: Tort7 },
-    { name: 'Торт "Орео"', price: '750 грн', weight: '900 г', image: Tort8 },
-    { name: 'Торт "Брауні Асорті"', price: '770 грн', weight: '900 г', image: Tort9 },
+    { name: 'Торт "Чізкейк "', price: 770, weight: '900 г', image: Tort1 },
+    { name: 'Торт "Естерхазі"', price: 850, weight: '1 кг', image: Tort2 },
+    { name: 'Торт "Київський дарунок "', price: 770, weight: '850 г', image: Tort3 },
+    { name: 'Торт "Мокко"', price: 770, weight: '900 г', image: Tort4 },
+    { name: 'Торт "Снікерс"', price: 900, weight: '1 кг', image: Tort5 },
+    { name: 'Торт "Мигдалевий"', price: 500, weight: '700 г', image: Tort6 },
+    { name: 'Торт "Акація"', price: 650, weight: '850 г', image: Tort7 },
+    { name: 'Торт "Орео"', price: 750, weight: '900 г', image: Tort8 },
+    { name: 'Торт "Брауні Асорті"', price: 770, weight: '900 г', image: Tort9 },
 ];
 
 const productsPage2 = [
-    { name: 'Торт "Чорний ліс"', price: '850 грн', weight: '1 кг', image: Tort10 },
-    { name: 'Торт "Празький"', price: '750 грн', weight: '900 г', image: Tort11 },
-    { name: 'Торт "Київський"', price: '600 грн', weight: '800 г', image: Tort12 },
-    { name: 'Торт "Захер"', price: '1000 грн', weight: '1 кг', image: Tort13 },
-    { name: 'Торт "Наполеон"', price: '850 грн', weight: '950 г', image: Tort14 },
-    { name: 'Торт "Пташине Молоко"', price: '750 грн', weight: '800 г', image: Tort15 },
-    { name: 'Торт "Червоний оксамит"', price: '850 грн', weight: '1 кг', image: Tort16 },
-    { name: 'Торт "Добош"', price: '800 грн', weight: '900 г', image: Tort17 },
-    { name: 'Торт "Медівник"', price: '900 грн', weight: '950 г', image: Tort18 },
+    { name: 'Торт "Чорний ліс"', price: 850, weight: '1 кг', image: Tort10 },
+    { name: 'Торт "Празький"', price: 750, weight: '900 г', image: Tort11 },
+    { name: 'Торт "Київський"', price: 600, weight: '800 г', image: Tort12 },
+    { name: 'Торт "Захер"', price: 1000, weight: '1 кг', image: Tort13 },
+    { name: 'Торт "Наполеон"', price: 850, weight: '950 г', image: Tort14 },
+    { name: 'Торт "Пташине Молоко"', price: 750, weight: '800 г', image: Tort15 },
+    { name: 'Торт "Червоний оксамит"', price: 850, weight: '1 кг', image: Tort16 },
+    { name: 'Торт "Добош"', price: 800, weight: '900 г', image: Tort17 },
+    { name: 'Торт "Медівник"', price: 900, weight: '950 г', image: Tort18 },
 ];
 
 const Catalog = () => {

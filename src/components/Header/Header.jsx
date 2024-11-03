@@ -53,20 +53,19 @@ const Header = () => {
                         <p>Ваш кошик порожній</p>
                     ) : (
                         cartItems.map((item) => (
-                           <div className={styles.basketItem} key={item.uniqueId}>
-                               <img src={item.image} alt={item.name} className={styles.basketImage} />
-                               <span className={styles.itemName}>{item.name}</span>
-                               <div className={styles.quantityControl}>
-                                   <span>{item.quantity}</span>
-                               </div>
-                               <span className={styles.price}>{item.price} </span>
-                               <button className={styles.removeItem} onClick={() => removeFromCart(item.uniqueId)}>×</button>
-                           </div>
+                            <div className={styles.basketItem} key={item.uniqueId}>
+                                <img src={item.image} alt={item.name} className={styles.basketImage} />
+                                <span className={styles.itemName}>{item.name}</span>
+                                <span className={styles.price}>{item.price.toLocaleString()} грн</span>
+                                <button className={styles.removeItem} onClick={() => removeFromCart(item.uniqueId)}>×</button>
+                            </div>
                         ))
                     )}
                     <div className={styles.orderSummary}>
-                        <p>Разом: {calculateTotal()} грн</p>
-                        <button className={styles.orderButton}>Оформити замовлення</button>
+                        <p>Разом: {calculateTotal().toLocaleString()} грн</p>
+                        <Link to="/checkout">
+                            <button className={styles.orderButton}>Оформити замовлення</button>
+                        </Link>
                     </div>
                 </div>
             )}
