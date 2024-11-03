@@ -23,9 +23,9 @@ export const CartProvider = ({ children }) => {
     const getTotal = () => {
         let total = 0;
         for (const item of cartItems) {
-            const itemPrice = item.price || 0; // Перевірка, якщо price не визначено, підставляємо 0
-            const itemQuantity = item.quantity || 0; // Перевірка, якщо quantity не визначено, підставляємо 0
-            total += itemPrice * itemQuantity; // Додаємо до загальної суми
+            const itemPrice = item.price || 0; 
+            const itemQuantity = item.quantity || 0; 
+            total += itemPrice * itemQuantity; 
         }
         return total;
     };
