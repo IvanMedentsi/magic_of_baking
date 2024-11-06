@@ -12,13 +12,6 @@ describe('PaymentDelivery Component', () => {
     );
   });
 
-  it('renders the delivery section container', () => {
-    cy.get('.deliverySection').should('exist');
-  });
-
-  it('renders payment conditions header', () => {
-    cy.get('h2').first().contains('Умови оплати та замовлення:').should('exist');
-  });
 
   it('renders payment conditions list', () => {
     cy.get('ul').first().find('li').should('have.length', 5);

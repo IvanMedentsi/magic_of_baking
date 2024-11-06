@@ -19,6 +19,8 @@ module.exports = defineConfig({
     e2e: {
         setupNodeEvents(on, config) {
             // Налаштування для e2e тестування
+
         },
+        baseUrl: 'http://localhost:9000',
     },
 });

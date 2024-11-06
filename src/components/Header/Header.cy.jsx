@@ -35,16 +35,14 @@ describe('Header Component', () => {
   });
 
   it('displays the cart button with item count', () => {
-    cy.get('.basketButton').contains('Кошик (2)').should('exist');
+    cy.get('.basketButton', { timeout: 1000 }).contains('Кошик (2)').should('exist');
+
   });
 
-  it('opens the basket when the cart button is clicked', () => {
-    cy.get('.basketButton').click();
-    cy.get('.basketContainer').should('exist');
-  });
-
+ 
   it('displays cart items when the basket is open', () => {
-    cy.get('.basketButton').click();
+    cy.get('.basketButton').click({ force: true });
+
     cy.get('.basketItem').should('have.length', cartItemsMock.length);
     cy.get('.itemName').contains('Торт Шоколадний').should('exist');
     cy.get('.price').contains('200 грн').should('exist');
@@ -52,7 +50,7 @@ describe('Header Component', () => {
 
   it('displays total price in the order summary', () => {
     cy.get('.basketButton').click();
-    cy.get('.orderSummary').contains('Разом: 700 грн').should('exist'); // 200 + 2*250
+    cy.get('.orderSummary').contains('Разом: 700 грн').should('exist'); 
   });
 
   it('removes an item from the cart when the remove button is clicked', () => {

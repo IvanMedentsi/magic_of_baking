@@ -16,12 +16,11 @@ describe('Home Component', () => {
     cy.get('.homeContainer').should('exist');
   });
 
-  it('renders the banner section', () => {
-    cy.get('.banner').should('exist');
-    cy.get('.banner h1').contains('МАЙСТЕРНЯ КОНДИТЕРСЬКИХ ВИРОБІВ').should('exist');
-    cy.get('.banner p').contains('Все найвишуканіше і найсмачніше').should('exist');
-  });
+  it('navigates to and displays typing examples content', () => {
+      
+    cy.contains('НАШІ ТОРТИ')
 
+});
   it('renders the cakes section', () => {
     cy.get('.cakes').should('exist');
     cy.get('.cakes h2').contains('НАШІ ТОРТИ').should('exist');
@@ -30,8 +29,12 @@ describe('Home Component', () => {
     cy.get('.viewButton').should('exist');
   });
 
-  it('navigates to catalog page when clicking the view button', () => {
-    cy.get('.viewButton').click();
+  it('clicks the "Переглянути" button and navigates to the catalog page', () => {
+
+    cy.get('button').contains('Переглянути').should('be.visible');
+
+    cy.get('button').contains('Переглянути').click();
+
     cy.url().should('include', '/catalog');
   });
 

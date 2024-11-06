@@ -15,5 +15,5 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app); // Експортуємо аутентифікацію
-export const database = getFirestore(app); // Ініціалізація Firestore та експорт
+export const auth = getAuth(app); 
+export const database = getFirestore(app); 
