@@ -1,0 +1,125 @@
+body{
+    background-color: #EAE2CF;
+}
+.checkoutContainer {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 150px; 
+    
+    border-radius: 10px;
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; 
+    padding: 20px;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.payerDetails,
+.deliveryDetails {
+    padding: 15px;
+    border-radius: 10px;
+   
+}
+
+.payerDetails h2,
+.deliveryDetails h2,
+.cartSummary h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.payerDetails label,
+.deliveryDetails label {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.payerDetails input,
+.deliveryDetails input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.deliveryDetails div {
+    margin-top: 10px;
+}
+
+.deliveryDetails input[type="radio"] {
+    margin-right: 5px;
+}
+
+.deliveryDetails label[for="novaPoshta"],
+.deliveryDetails label[for="ukrPoshta"] {
+    margin-right: 15px;
+}
+.radioButtonsContainer {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 10px; 
+}
+
+.deliveryOption {
+    display: flex; 
+    align-items: center; 
+}
+
+.cartSummary {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cartSummary ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cartSummary ul li {
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+.cartSummary p {
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.submitButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #333;
+    background-color: #d6c7a1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #c5b18e;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}

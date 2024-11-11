@@ -1,0 +1,109 @@
+.homeContainer {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #EAE2CF;
+    
+        padding-top: 150px; 
+    
+}
+
+.banner {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #392a11;
+}
+
+.cakes {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cakeGallery {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 90px; 
+    padding-top: 20px;
+}
+
+.cakeItem {
+    position: relative; 
+    text-align: center;
+}
+
+.cakeImage {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; 
+    border: 5px solid #c5b499; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
+
+}
+
+.centeredItem .viewButton {
+    position: absolute;
+    bottom: -60px; 
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #c5b499;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: 3px solid #c5b499; 
+    border-radius: 2px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease;
+
+}
+.viewButton:hover{
+    background-color: rgb(199, 180, 148);
+    transition: 1s;
+}
+
+.about {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 100px 20px;
+    color: #4a3c32;
+    line-height: 1.6;
+}
+
+.advantages {
+    padding: 0px 20px;
+    text-align: center;
+}
+
+.advantageGallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding-top: 20px;
+}
+.advantageText {
+    margin-top: 10px; 
+    font-size: 14px; 
+    color: #4a3c32; 
+    text-align: center; 
+}
+
+.chooseWe {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 10px; 
+    display: block;
+}
+
+.advantageItem {
+    text-align: center;
+    max-width: 180px;
+}

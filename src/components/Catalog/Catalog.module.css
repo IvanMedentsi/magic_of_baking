@@ -1,0 +1,99 @@
+.catalogContainer {
+    max-width: 100%; /* Зміна ширини для кращого вирівнювання */
+    margin: 0 auto;
+    padding: 80px;
+    background-color: #f9f4e9; /* Світліший фон */
+    margin-top: 120px; /* Зменшена відстань */
+}
+
+.catalogTitle {
+    font-size: 36px;
+    text-align: center;
+    color: #5F5743;
+    margin-bottom: 70px; /* Збільшений відступ для краси */
+}
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; /* Зменшений відступ для компактності */
+}
+
+.productItem {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px; /* Збільшений радіус */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Більш виразна тінь */
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.productItem:hover {
+    transform: translateY(-5px); /* Ефект підняття при наведенні */
+}
+
+.productImage {
+    
+    width: 80%;
+    height: 240px; /* Адаптована висота */
+    object-fit: cover; /* Забезпечення збереження пропорцій */
+    border: 1px solid #ddd; /* Розділова лінія */
+    margin-bottom: 15px;
+}
+
+.productName {
+    font-size: 18px; /* Збільшений шрифт */
+    font-weight: bold;
+    color: #3d3a34;
+    margin-bottom: 12px;
+}
+
+.productPrice {
+    font-size: 16px; /* Збільшено */
+    color: #5F5743;
+    margin-bottom: 12px;
+}
+
+.cartButton {
+    display: inline-block;
+    align-items: center;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #5F5743;
+    border-radius: 12px; /* Заокруглення кнопки */
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.6s;
+}
+
+.cartButton:hover {
+    background-color: #4e4838;
+    transform: scale(1.1); /* Легке збільшення */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.pageLink {
+    padding: 10px 15px; /* Більший відступ */
+    margin: 0 5px;
+    font-size: 16px;
+    color: #5F5743;
+    background-color: #d3c9b5;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.pageLink.active {
+    background-color: #5F5743;
+    color: #fff;
+}
+
+.pageLink:hover {
+    background-color: #c5b18f;
+}
